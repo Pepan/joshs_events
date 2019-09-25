@@ -1,24 +1,14 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Database creation and initialization:
+ ```rake db:drop db:create db:migrate db:seed```
 
-Things you may want to cover:
+* How to run the test suite: 
+```rails c```
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```ruby
+group = Group.find 1
+group.event_votes
+group.event_votes.order score: :asc
+group.event_votes.order score: :desc
+```
